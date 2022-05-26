@@ -5,8 +5,6 @@ import styles from "../styles/utils.module.css";
 
 export default function Custom404() {
   return (
-    <Layout title="404">
-      <p>Page not found. Not sure what happened here. Sorry.</p>
-    </Layout>
+    <Layout title="404" />
   );
 }
