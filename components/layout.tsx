@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/utils.module.css";
 
-export const siteTitle = "RAEN 🌧";
-export const siteDescription = "A build tool for NEAR smart contracts. The rain in NEAR's desert. More time building, less time copying boilerplate. Fun!";
+export const siteTitle = "RAEN";
+export const siteDescription = "RAEN makes it easy to explore contracts on NEAR. Just build with `raen` and try it!";
 
 export default function Layout({
   title = siteTitle,
@@ -21,7 +21,7 @@ export default function Layout({
         <meta name="og:title" content={combinedTitle} />
         <meta name="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://raen.dev/" />
+        <meta property="og:url" content="https://raen.dev/admin" />
         <meta
           property="og:image"
           content="https://raen.dev/admin/social-banner.png"
@@ -29,10 +29,10 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
         {author && <meta name="twitter:creator" content={author} />}
         <meta name="twitter:title" content={combinedTitle} />
-        <meta httpEquiv="refresh" content="0; url='https://github.com/raendev/raen#readme'" />
+        <meta httpEquiv="refresh" content="0; url='https://raen.dev/admin'" />
       </Head>
       <header className={styles.header}>
-        <h1 className={styles.heading2Xl}>Redirecting to source...</h1>
+        <h1 className={styles.heading2Xl}>Redirecting to RAEN Admin...</h1>
       </header>
     </div>
   );
