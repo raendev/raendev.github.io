@@ -21,11 +21,17 @@ export default function Layout({
         <meta name="og:title" content={combinedTitle} />
         <meta name="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://raen.dev/admin" />
+        <meta property="og:url" content="https://raen.dev/admin/" />
         <meta
           property="og:image"
           content="https://raen.dev/admin/social-banner.png"
         />
+        <meta property="og:image:alt" content="RAEN Admin: RAEN makes it easy to explore contracts on NEAR. A text input filled with 'your-contract.near'." />
+        <meta
+          name="twitter:image"
+          content="https://raen.dev/admin/social-banner.png"
+        />
+        <meta name="twitter:image:alt" content="RAEN Admin: RAEN makes it easy to explore contracts on NEAR. A text input filled with 'your-contract.near'." />
         <meta name="twitter:card" content="summary_large_image" />
         {author && <meta name="twitter:creator" content={author} />}
         <meta name="twitter:title" content={combinedTitle} />
