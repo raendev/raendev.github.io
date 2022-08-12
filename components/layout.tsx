@@ -1,19 +1,26 @@
 import Head from "next/head";
-import styles from "../styles/utils.module.css";
+import Logo from "../components/logo";
 
-export const siteTitle = "RAEN";
-export const siteDescription = "RAEN makes it easy to explore contracts on NEAR. Just build with `raen` and try it!";
+const siteTitle = "RAEN";
+const siteDescription = "Unlocking fast, ambitious dapp development";
+
+type Props = React.PropsWithChildren<{
+  title?: string
+  description?: string
+  author?: string
+}>
 
 export default function Layout({
   title = siteTitle,
   description = siteDescription,
   author = "",
-}) {
+  children
+}: Props) {
   const combinedTitle = `${title}${
     title === siteTitle ? "" : ` • ${siteTitle}`
   }`;
   return (
-    <div className={styles.container}>
+    <div className="bokeh">
       <Head>
         <title>{combinedTitle}</title>
         <link rel="icon" href="/favicon.svg" />
@@ -35,11 +42,20 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
         {author && <meta name="twitter:creator" content={author} />}
         <meta name="twitter:title" content={combinedTitle} />
-        <meta httpEquiv="refresh" content="0; url='https://raen.dev/admin'" />
       </Head>
-      <header className={styles.header}>
-        <h1 className={styles.heading2Xl}>Redirecting to RAEN Admin...</h1>
+      <header style={{ margin: "0 auto", textAlign: "center" }}>
+        <Logo />
       </header>
+      <main className="container">
+        {children}
+      </main>
+      <footer className="container" style={{
+        fontSize: '0.8em',
+        padding: 'var(--spacing-l)',
+        textAlign: 'center',
+      }}>
+        <p>made by <a href="https://ahalabs.dev">Aha Labs</a></p>
+      </footer>
     </div>
   );
 }
