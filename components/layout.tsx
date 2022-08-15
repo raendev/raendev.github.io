@@ -20,7 +20,7 @@ export default function Layout({
     title === siteTitle ? "" : ` • ${siteTitle}`
   }`;
   return (
-    <div className="bokeh">
+    <div>
       <Head>
         <title>{combinedTitle}</title>
         <link rel="icon" href="/favicon.svg" />
