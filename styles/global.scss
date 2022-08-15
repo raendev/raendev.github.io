@@ -127,6 +127,7 @@ $red: #fc5b5b;
   --box-shadow-deep: 0px 4px 20px rgba(0, 0, 0, 0.5);
 
   background: var(--bg) url(/circles.svg);
+  background-attachment: fixed;
   background-size: calc(max(100%, 1440px));
   background-repeat: no-repeat;
   color: var(--fg);
