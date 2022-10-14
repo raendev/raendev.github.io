@@ -1,3 +1,25 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bokeh">
+		<slot />
+	</body>
+</html>
+<style lang="scss" is:global>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro&display=swap');
 
 $light: #f0f0f0;
@@ -208,3 +230,4 @@ img {
 iframe {
   border-radius: var(--br-small);
 }
+</style>

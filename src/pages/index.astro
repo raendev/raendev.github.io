@@ -1,16 +1,16 @@
-import Layout from "../components/layout";
-import { getPosts } from "../lib/posts";
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-export default function Home() {
-  return (
-    <Layout>
+<Layout title="RAEN: build ambitious dapps">
+	<main>
       <p>RAEN, born a build tool...</p>
-      <div className="responsiveVideoWrap">
-        <iframe src="https://www.youtube.com/embed/m5dOyaKp18Y" title="Introducing RAEN: YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <div class="responsiveVideoWrap">
+        <iframe src="https://www.youtube.com/embed/m5dOyaKp18Y" title="Introducing RAEN: YouTube video player" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-full-screen></iframe>
       </div>
       <p>...will grow into a framework:</p>
-      <div className="responsiveVideoWrap">
-        <iframe src="https://www.youtube.com/embed/i3W2kgRLqew" title="RAEN Status & Vision: YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <div class="responsiveVideoWrap">
+        <iframe src="https://www.youtube.com/embed/i3W2kgRLqew" title="RAEN Status & Vision: YouTube video player" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow-full-screen></iframe>
       </div>
 
       <hr/>
@@ -20,6 +20,7 @@ export default function Home() {
         <li><a href="https://raen.dev/admin">RAEN Admin</a></li>
         <li><a href="https://github.com/raendev/raen">Just start building</a></li>
         <li>Learn Rust + NEAR, <a href="https://raen.dev/guide">the friendly way</a></li>
+				<li>Ask questions in <a href="https://discord.gg/ffAZu9S4yv">our Discord</a></li>
       </ul>
 
       <hr/>
@@ -31,11 +32,50 @@ export default function Home() {
       <p><strong>Rust-only</strong>, for now. New to Rust or NEAR? Check out <strong><a href="https://raen.dev/guide" rel="nofollow">The RAEN Guide</a></strong>.</p>
       <h3>About the name</h3>
       <p>“RAEN” is “NEAR” spelled backwards. It is pronounced the same as “rain”.</p>
-    </Layout>
-  );
-}
+	</main>
+</Layout>
 
-export async function getStaticProps() {
-  const posts = getPosts();
-  return { props: { posts } };
-}
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

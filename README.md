@@ -1,13 +1,12 @@
 # Raen Home Page
 
-Site built with [Next](https://nextjs.org/learn).
+Site built with [Astro](https://astro.build).
 
 # Contributing
 
-Prereq: install NodeJS and [yarn](https://yarnpkg.com). Then:
+Prereq: install NodeJS.com). Then:
 
 - Clone repo
-- `yarn install`
-- `yarn dev` and edit files to see your changes
-- `yarn build` and open `docs/index.html` to see if the built version looks correct
+- `npm install`
+- `npm run dev` and edit files to see your changes
 - `git push` to the `main` branch to deploy an updated website
